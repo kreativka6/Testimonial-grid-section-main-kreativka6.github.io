@@ -1,0 +1,146 @@
+/* CSS Document */
+
+:root{
+  /* Primary   */
+
+--moderate_violet: hsl(263, 55%, 52%);
+--grayish_blue: hsl(217, 19%, 35%);
+--blackish_blue: hsl(219, 29%, 14%);
+--white: hsl(0, 0%, 100%);
+
+  /* Neutral   */
+
+--light_gray: hsl(0, 0%, 81%);
+--light_grayish_blue: hsl(210, 46%, 95%);
+
+--barlow: 'Barlow Semi Condensed', sans-serif;
+--fs500: 500;
+--fs600: 600;
+;
+}
+
+*{
+  font-family: var(--barlow);
+}
+
+body{
+   background-color: var(--light_grayish_blue);
+}
+
+/* body */
+
+.article1, 
+.article2,
+.article3,
+.article4,
+.article5{
+  padding: 28px;
+  box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);;
+  border-radius: 5px;
+  color: var(--light_gray);
+  background-repeat: no-repeat;
+}
+
+.article1{
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-position: top right;
+  background-color: var(--moderate_violet);
+}
+
+.article2{
+  background-color: var(--grayish_blue);
+}
+
+.article4{
+  background-color: var(--blackish_blue);
+}
+
+.article3, 
+.article5{
+ background-color: var(--white);
+  color: var(--blackish_blue);
+}
+
+.article3 .title, 
+.article5 .title{
+  color: var(--blackish_blue);
+}
+
+/* article header */
+
+.header{
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.header img{
+  border-radius: 50%;
+  border: 3px solid var(--light_gray);
+  width: 60px;
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  padding-inline: min(10px, 20px);
+}
+
+.name p{
+   margin: 4px;
+   font-size: 13px;
+}
+
+.name p:nth-child(1){
+    font-weight: bolder;
+}
+
+  /*article main part*/
+  
+   .title{
+    font-family: var(--barlow);
+    color: var(--white);
+    font-weight: var(--fs600);
+   }
+   
+   .text {
+     line-height: 1.3rem;
+     font-size: 13px;
+   }
+
+
+   .testimonial_grid{
+     display: grid;
+     gap: 1.5rem;
+     padding-block: 2rem;
+     width: min(95%, 70rem);
+     margin-inline: auto;
+   }
+
+   
+   @media (min-width: 640px) {
+   
+   .grid_col_span2{
+     grid-column: span 2;
+   }
+   
+    .testimonial_grid{
+       grid-template-columns: repeat(4, 1fr);
+   }
+   
+   .article5{
+     grid-column-start: 4;
+     grid-row-start: 1;
+     grid-row-end: 3;
+   }
+   }
+
+    .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    }
+    
+    .attribution a { 
+    color: hsl(228, 45%, 44%); 
+    }
